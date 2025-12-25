@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+telethon
+pandas
+tqdm
+scikit-learn
+numpy
+simplemma
+pydantic>=2.0
+pydantic-settings>=2.0

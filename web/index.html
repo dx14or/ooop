@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>News Topic Predictor</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">Local MVP</p>
+        <h1>Predict the next topic</h1>
+        <p class="subtitle">
+          Upload a local JSONL export and get the most likely topic for the next post.
+        </p>
+      </header>
+
+      <section class="panel">
+        <label class="label" for="dataPath">Path to JSONL / JSONL.GZ</label>
+        <div class="row">
+          <input
+            id="dataPath"
+            class="input"
+            type="text"
+            placeholder="/path/to/channel.jsonl"
+          />
+          <button id="runBtn" class="button">Predict</button>
+        </div>
+        <p class="hint">
+          Channel URL ingestion is not wired yet. Export locally and pass the file path.
+        </p>
+      </section>
+
+      <section class="results" id="results"></section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

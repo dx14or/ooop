@@ -1,0 +1,152 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f1ea;
+  --ink: #1b1b1b;
+  --muted: #6c5f54;
+  --accent: #0f6f5c;
+  --card: #fffaf3;
+  --shadow: 0 20px 40px rgba(17, 19, 21, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(1200px 600px at 10% -10%, #ffe9c7 0%, transparent 60%),
+    radial-gradient(900px 500px at 90% 10%, #d2f0e8 0%, transparent 55%),
+    var(--bg);
+  font-family: "Alegreya Sans", "Avenir Next", "Trebuchet MS", sans-serif;
+  color: var(--ink);
+}
+
+.page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 64px 24px 96px;
+  display: grid;
+  gap: 32px;
+}
+
+.hero {
+  animation: rise 600ms ease-out;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: clamp(32px, 5vw, 54px);
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 0;
+  max-width: 560px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.panel {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.input {
+  flex: 1 1 320px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: white;
+  font-size: 16px;
+}
+
+.button {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(15, 111, 92, 0.25);
+}
+
+.hint {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.results {
+  display: grid;
+  gap: 12px;
+}
+
+.result-card {
+  background: white;
+  border-radius: 16px;
+  padding: 16px 18px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  animation: rise 420ms ease-out;
+}
+
+.result-title {
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.result-meta {
+  margin: 0;
+  color: var(--muted);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 40px 20px 64px;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
